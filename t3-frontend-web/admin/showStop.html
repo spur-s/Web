@@ -1,0 +1,193 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mero Gantavya</title>
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons.css">
+   
+    <link rel="stylesheet" href="vendors/jqvmap.min.css">
+
+
+    <link rel="stylesheet" href="style/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo" height="35px" width="300px"></a>
+                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo" height="35px"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="dashboard.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+                    <h3 class="menu-title">Add details</h3><!-- /.menu-title -->
+            
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Show Route Details</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="showStop.html">Stop Details</a></li>
+                            <li><i class="fa fa-table"></i><a href="showRoute.html">Route Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Add Route Details</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="addRoute.html">Add Route</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="addStop.html">Add Stop</a></li>
+                        </ul>
+                    </li>
+
+    
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+    
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-3">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    
+                </div>
+                    
+
+                <div class="col-sm-9">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.png" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                                <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                                <a class="nav-link" id="logout"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                   
+                </div>
+          
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">Data Table</strong>
+                            </div>
+                            <div class="card-body">
+                                <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr style="text-align: center">
+                                            <th>Name</th>
+                                            <th>Latitude</th>
+                                            <th>Longitude</th>
+                                            <th colspan="2">Actions</th>
+                                        
+                                        </tr>
+                                    </thead>
+                                    <tbody id="list-stop">                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div><!-- .animated -->
+        </div>
+
+
+    
+    <!-- Right Panel -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/showStop.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+<script>
+jQuery( document ).ajaxComplete(function($) {
+jQuery(document).find('.btn_save').hide();
+jQuery(document).find('.btn_cancel').hide(); 
+jQuery(document).on('click', '.btn_cancel', function(event) 
+{
+	event.preventDefault();
+
+	var tbl_row = jQuery(this).closest('tr');
+
+	var row_id = tbl_row.attr('row_id');
+
+	//hide save and cacel buttons
+	tbl_row.find('.btn_save').hide();
+	tbl_row.find('.btn_cancel').hide();
+
+	//show edit button
+	tbl_row.find('.btn_edit').show();
+
+	//make the whole row editable
+	tbl_row.find('.row_data')
+	.attr('edit_type', 'click')	 
+	.removeClass('bg-warning')
+	.css('padding','') 
+
+	tbl_row.find('.row_data').each(function(index, val) 
+	{   
+		jQuery(this).html( jQuery(this).attr('original_entry') ); 
+	});  
+});
+});
+</script>
+
+   
+   
+ 
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+
+body{
+	border-top: 30px solid #F2C83E;		
+	margin:auto;
+	border-left: 1px solid #E4E3DE;
+	border-right: 1px solid #E4E3DE;
+	border-bottom: 1px solid #E4E3DE;
+
+	}
+	 
+#info
+{
+	float:left;
+	margin-top: 60px;
+}
+
+#info h1
+{
+	font-weight: bold;
+	font-size: 40px;
+}
+
+#info h2
+{	
+	font-size: 27px;
+}
+
+ #soclogo
+{
+	float: right;	
+}
+
+#num
+{
+	padding:10px;
+	font-size: 18px;
+	text-decoration: underline;
+	margin-top: 10px;
+}
+
+
+/*#first h2{
+	float: left;
+	height:auto;
+	width: 70px;
+	font-style: arial black;
+	margin:30px 20px 10px 10px;
+}
+#first p{
+	float: left;
+	height:auto;
+	width: 750px;
+	margin-left: 100px;
+	margin-top: 10px;
+	font-family:arial; 
+	text-align: justify;
+	border-bottom: 2px solid #E4E3DE;
+	}
+
+	#second h2{
+	float: left;
+	height:auto;
+	width: 70px;
+	font-style: arial black;
+	margin:30px 20px 10px 10px;
+}
+
+#second ul{
+	float: left;
+	height:auto;
+	width: 750px;
+	margin-left: 70px;
+	margin-top: 0px;
+	font-family:arial; 
+	text-align: justify;
+	border-bottom: 2px solid #E4E3DE;
+	list-style: 
+	}
+*/
+
+
+#ppp{
+	margin-top: 20px;
+}

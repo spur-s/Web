@@ -1,0 +1,234 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mero Gantavya</title>
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <link rel="stylesheet" href="admin/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="admin/vendors/font-awesome.min.css">
+    <link rel="stylesheet" href="admin/vendors/themify-icons.css">
+   
+    <link rel="stylesheet" href="admin/vendors/jqvmap.min.css">
+
+    <link rel="stylesheet" href="style/dashboard_style.css">
+
+    <link rel="stylesheet" href="admin/style/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+             
+                <a class="navbar-brand" href="dashboard.html"><img src="admin/images/logo.png" alt="Logo" width="300px" height="35px" ></a>
+            </div>
+          
+            <div class="accordion" id="accordion2" >
+                    <!-- <div class="nav navbar-nav"> -->
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+        
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><b>Get Direction
+                        </b> </a>
+                        </div>
+                        <div id="collapseOne" class="accordion-body">
+                            <div class="accordion-inner">
+                                <div id="location">Your Location
+                                    <input type="text" id="location" placeholder="Your location"> </div><br>
+                                    <div id="destination">Your Destination
+                                    <input type="text" id="destination" placeholder="Your Destination" /></div><br>
+                                    <button type="button" class="btn btn-info btn_search" >Search</button>&nbsp
+                                    <button type="button" class="btn btn-info btn_clear" >Clear</button>
+                                 
+                                </div>
+                            </div>
+                        </div>
+                   
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                            <b>Routes 
+                            </b></a>
+                        </div>
+                        <div id="collapseTwo" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <div class="textdesign" id="routename">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a  class="accordion-toggle" data-parent="#accordion2" href="personal.html" target="_blank"><b>
+                          About Developer
+                           </b> </a>
+                        </div>
+                    </div>
+                       
+        
+    
+                    </div>
+                </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside>
+
+    <!-- Left Panel -->
+    
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+         
+
+                <div class="col-sm-12">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="admin/images/admin.png" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                                <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                                <a class="nav-link" id="logout"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                   
+                </div>
+          
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="content mt-3">
+                <div class="animated fadeIn">
+            
+            
+                      <div class="row">
+                          <div class="col-lg-12">
+                              <div class="user">
+                                  <!-- <div class="stop-header">
+                                      <strong class="stop-title"> Enter Mero Gantavya Stops Data</strong>
+                                  </div> -->
+                                  <div class="user-body">
+                                      <!-- Credit stop -->
+                                      <div >
+                                          <div class="user-body">
+                                              <div class="user-title">
+                                                  <h3 class="text-center">Your Deatils</h3>
+                                              </div>
+                                              <hr>
+                                             
+                                                  <div class="form-group text-center">
+                                                      <ul class="list-inline">
+                                                          <li class="list-inline-item"><i class="fa fa-user fa-2x"></i></li>
+                                                          <li class="list-inline-item"><i class="fa fa-edit fa-2x"></i></li>
+                                                          <!-- <li class="list-inline-item"><i class="fa fa-user-tag fa-2x"></i></li> -->
+                                                      </ul>
+                                                  </div>
+                                                  <div class="user-group">
+                                                      <label for="firstname" class="control-label mb-1">First Name</label>
+                                                      <input id="gfirstname" name="firstname" type="text" class="form-control" readonly>
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <label for="lastname" class="control-label mb-1">Last Name</label>
+                                                    <input id="glastname" name="lastname" type="text" class="form-control" readonly>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="username" class="control-label mb-1">User Name</label>
+                                                    <input id="gusername" name="username" type="text" class="form-control" readonly >
+                                                </div>
+                                                <!-- <div class="form-group">
+                                                    <label for="password" class="control-label mb-1">Password</label>
+                                                    <input id="gpassword" name="password" type="text" class="form-control" readonly>
+                                                </div> -->
+                      
+
+             <button type="submit" data-toggle="modal" data-target="#CustomerProfileUpdateModal" class="btn btn-lg btn-info btn-block" href="#">Edit</button>
+                <div class="modal" id="CustomerProfileUpdateModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content card">
+                            <div class="modal-header">
+                                <button type="button" class="close text-light bg-dark" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="card bg-light">
+                                    <div class="card-header bg-light text-center text-info">
+                                        <h3> Profile Edit Form</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <input type="hidden" name="id" >
+                                        <div class="form-group">
+                                            <div class="form-row">
+                                                <div class="col">
+                                                        <label for="firstname" class="control-label mb-1">First Name</label>
+                                                        <input id="efirstname" name="firstname" type="text" class="form-control">
+                                                </div>
+                                                <div class="col">
+                                                        <label for="lastname" class="control-label mb-1">Last Name</label>
+                                                        <input id="elastname" name="lastname" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="username" class="control-label mb-1">User Name</label>
+                                                <input id="eusername" name="username" type="text" class="form-control" >
+                                        </div>
+                                        <!-- <div class="form-group">
+                                                <label for="password" class="control-label mb-1">Password</label>
+                                                <input id="epassword" name="password" type="text" class="form-control">
+                                        </div> -->
+                                     <div class="card-footer form-group text-center">
+                                       
+                                        <button type="submit"class="btn btn-success hell " name="update-user" id="update-user" style="width:50%">Update Profile</button>
+                                        <button type="button" class="btn btn-danger " data-dismiss="modal" style="width:50%"><i class="fa fa-window-close" >&nbsp;Cancel </i></button> 
+                                    </div>
+                                    </div>
+                                </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+
+
+        </div> <!-- .content -->
+    </div><!-- /#right-panel -->
+</div>
+    <!-- Right Panel -->
+
+    <script src="admin/js/jquery.min.js"></script>
+    <script src="admin/js/popper.min.js"></script>
+    <script src="admin/js/bootstrap.min.js"></script>
+    <script src="admin/js/main.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/logout.js"></script>
+
+
+   
+
+</body>
+
+</html>

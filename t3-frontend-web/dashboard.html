@@ -1,0 +1,179 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mero Gantavya</title>
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <link rel="stylesheet" href="admin/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="admin/vendors/font-awesome.min.css">
+    <link rel="stylesheet" href="admin/vendors/themify-icons.css">
+   
+    <link rel="stylesheet" href="admin/vendors/jqvmap.min.css">
+
+    <link rel="stylesheet" href="style/dashboard_style.css">
+
+    <link rel="stylesheet" href="admin/style/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+             
+                <a class="navbar-brand" href="dashboard.html"><img src="admin/images/logo.png" alt="Logo" width="300px" height="35px" ></a>
+            </div>
+          
+            <div class="accordion" id="accordion2" >
+                    <!-- <div class="nav navbar-nav"> -->
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+        
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><b>Get Direction
+                        </b> </a>
+                        </div>
+                        <div id="collapseOne" class="accordion-body">
+                            <div class="accordion-inner">
+                                <div id="location">Your Location
+                                    <input type="text" id="txtlocation" placeholder="Your location" value="Balkkumari"> </div><br>
+                                    <div id="destination">Your Destination
+                                    <input type="text" id="txtdestination" placeholder="Your Destination" value="Gopikrishna" /></div><br>
+                                    <button type="button" class="btn btn-info btn_search" >Search</button>&nbsp
+                                    <button type="button" class="btn btn-info btn_clear" >Clear</button>
+                                 
+                                </div>
+                            </div>
+                        </div>
+                   
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                            <b>Routes 
+                            </b></a>
+                        </div>
+                        <div id="collapseTwo" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <div class="textdesign" id="routename">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a  class="accordion-toggle" data-parent="#accordion2" href="personal.html" target="_blank"><b>
+                          About Developer
+                           </b> </a>
+                        </div>
+                    </div>
+                       
+        
+    
+                    </div>
+                </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside>
+
+    <!-- Left Panel -->
+    
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+         
+
+                <div class="col-sm-12">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="admin/images/admin.png" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                          <a class="nav-link" id="logout"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                   
+                </div>
+          
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+
+
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+         
+
+            <div class="col-xl-12">
+               
+                    <div class="Vector-map-js">
+                        <div id="vmap" class="vmap" ></div>
+                    </div>
+                </div>
+                <!-- /# card -->
+            </div>
+
+
+        </div> <!-- .content -->
+    </div><!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+    <script src="admin/js/jquery.min.js"></script>
+    <script src="admin/js/popper.min.js"></script>
+    <script src="admin/js/bootstrap.min.js"></script>
+    <script src="admin/js/main.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/dashboard.js"></script>
+
+   
+   
+    <script src="admin/js/jquery.vmap.min.js"></script>
+    <script src="admin/js/jquery.vmap.sampledata.js"></script>
+    <script src="admin/js/jquery.vmap.world.js"></script>
+    <script>
+        (function($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
+
+</body>
+
+</html>

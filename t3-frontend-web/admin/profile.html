@@ -1,0 +1,226 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mero Gantavya</title>
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons.css">
+   
+    <link rel="stylesheet" href="vendors/jqvmap.min.css">
+
+
+    <link rel="stylesheet" href="style/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo" height="35px" width="300px"></a>
+                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo" height="35px"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="dashboard.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+                    <h3 class="menu-title">Add details</h3><!-- /.menu-title -->
+            
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Show Route Details</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="showStop.html">Stop Details</a></li>
+                            <li><i class="fa fa-table"></i><a href="showRoute.html">Route Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Add Route Details</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="addRoute.html">Add Route</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="addStop.html">Add Stop</a></li>
+                        </ul>
+                    </li>
+
+    
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+    
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-3">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                   
+                </div>
+                    
+
+                <div class="col-sm-9">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.png" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                                <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                                <a class="nav-link" id="logout"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                   
+                </div>
+          
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+
+
+
+    
+    <!-- change -->
+    <div class="content mt-3">
+            <div class="animated fadeIn">
+        
+        
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="user">
+                              <!-- <div class="stop-header">
+                                  <strong class="stop-title"> Enter Mero Gantavya Stops Data</strong>
+                              </div> -->
+                              <div class="user-body">
+                                  <!-- Credit stop -->
+                                  <div >
+                                      <div class="user-body">
+                                          <div class="user-title">
+                                              <h3 class="text-center">Your Deatils</h3>
+                                          </div>
+                                          <hr>
+                                        
+                                              <div class="form-group text-center">
+                                                  <ul class="list-inline">
+                                                      <li class="list-inline-item"><i class="fa fa-user fa-2x"></i></li>
+                                                      <li class="list-inline-item"><i class="fa fa-edit fa-2x"></i></li>
+                                                      <!-- <li class="list-inline-item"><i class="fa fa-user-tag fa-2x"></i></li> -->
+                                                  </ul>
+                                              </div>
+                                              <div class="user-group">
+                                                  <label for="firstname" class="control-label mb-1">First Name</label>
+                                                  <input id="gfirstname" name="firstname" type="text" class="form-control" readonly>
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="lastname" class="control-label mb-1">Last Name</label>
+                                                <input id="glastname" name="lastname" type="text" class="form-control" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="username" class="control-label mb-1">User Name</label>
+                                                <input id="gusername" name="username" type="text" class="form-control" readonly >
+                                            </div>
+                                            <!-- <div class="form-group">
+                                                <label for="password" class="control-label mb-1">Password</label>
+                                                <input id="gpassword" name="password" type="text" class="form-control" readonly>
+                                            </div>
+                             -->
+                                          <button type="submit" data-toggle="modal" data-target="#CustomerProfileUpdateModal" class="btn btn-lg btn-info btn-block" href="#">Edit</button>
+                                          <div class="modal" id="CustomerProfileUpdateModal" role="dialog">
+                                              <div class="modal-dialog">
+                                                  <div class="modal-content card">
+                                                      <div class="modal-header">
+                                                          <button type="button" class="close text-light bg-dark" data-dismiss="modal">&times;</button>
+                                                      </div>
+                                                      <div class="modal-body">
+                                                          <div class="card bg-light">
+                                                              <div class="card-header bg-light text-center text-info">
+                                                                  <h3> Profile Edit Form</h3>
+                                                              </div>
+                                                              <div class="card-body">
+                                                                  <input type="hidden" name="id" >
+                                                                  <div class="form-group">
+                                                                      <div class="form-row">
+                                                                          <div class="col">
+                                                                                  <label for="firstname" class="control-label mb-1">First Name</label>
+                                                                                  <input id="efirstname" name="firstname" type="text" class="form-control">
+                                                                          </div>
+                                                                          <div class="col">
+                                                                                  <label for="lastname" class="control-label mb-1">Last Name</label>
+                                                                                  <input id="elastname" name="lastname" type="text" class="form-control">
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                                  <div class="form-group">
+                                                                          <label for="username" class="control-label mb-1">User Name</label>
+                                                                          <input id="eusername" name="username" type="text" class="form-control" >
+                                                                  </div>
+                                                                  <!-- <div class="form-group">
+                                                                          <label for="password" class="control-label mb-1">Password</label>
+                                                                          <input id="epassword" name="password" type="text" class="form-control">
+                                                                  </div> -->
+                                                               <div class="card-footer form-group text-center">
+                                                                  <button type="submit"class="btn btn-success hell " name="update-user" id="update-user" class="fa fa-check-circle"  style="width:50%">Update Profile</button>
+                                                                  <button type="button" class="btn btn-danger " data-dismiss="modal" style="width:50%"><i class="fa fa-window-close" >&nbsp;Cancel </i></button> 
+                                                              </div>
+                                                              </div>
+                                                          </div>
+                                                  
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    
+
+
+    </div> <!-- .content -->
+</div><!-- /#right-panel -->
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/logout.js"></script>
+
+<script src="js/profile.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"
+></script>
+   
+ 
+
+</body>
+
+</html>
